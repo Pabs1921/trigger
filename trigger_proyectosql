@@ -8,6 +8,9 @@ v_horas_salida LINEA.HORA_SALIDA%TYPE;
 v_ids_linea LINEA.ID%TYPE;
 V_ID_MAX  LINEA.ID%TYPE; 
 BEGIN 
+v_horas_trabajadas:=0;
+v_horas_llegada:=0;
+v_horas_salida:=0;
 SELECT MIN(id) into v_ids_linea from linea;
 SELECT MAX(ID) INTO V_ID_MAX FROM LINEA;
 LOOP
